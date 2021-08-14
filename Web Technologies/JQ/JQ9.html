@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 9</title>
+	<script src="../Script/jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#run").click(function(){
+				$("#frt ul li").eq(1).addClass("alpha");
+			});	
+		});
+
+		$(document).ready(function(){
+			$("#cls").click(function(){
+				$("#frt ul li").eq(1).removeClass("alpha");
+			});	
+		});
+	</script>
+	<style>
+		fieldset{
+			width: fit-content;
+			border: solid;
+		}
+		.alpha{
+			font-size: xx-large;
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+		<h1>Fruits</h1>
+		<div id="frt">
+			<ul>
+				<li>Apple</li>
+				<li>Kiwi</li>
+				<li>Straberry</li>
+			</ul>
+			<br><br>
+			<button id="run">Run</button>
+			<button id="cls">Clear</button>
+		</div>
+</fieldset>
+</body>
+</html>

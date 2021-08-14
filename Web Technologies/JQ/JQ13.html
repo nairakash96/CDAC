@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<style>
+			.alpha{
+				color: red;
+				font-size: large;
+				font-weight: bold;
+			}
+		</style>
+		<script src="../Script/jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+			const person=[];
+			$(document).ready(function() {
+				$("#tab").hide(500);
+			 $("#btn1").click(function() {
+			 		$("#ename").blur(function(){
+			 		 	if(/^[A-Z a-z]+$/.test($(this).val())){
+			 		 		$(this).removeClass("is-invalid").addClass("is-valid").attr("data-valid", true);
+			 		 	}else{
+			 		 		$(this).removeClass("is-valid").addClass("is-invalid").attr("data-valid", false);
+			 		 	}
+			 		 	})
+			 		$("#mail").blur(function(){
+			 		 	if(/\S+@\S+\.\S+/.test($(this).val())){
+			 		 		$(this).removeClass("is-invalid").addClass("is-valid").attr("data-valid", true);
+			 		 	}else{
+			 		 		$(this).removeClass("is-valid").addClass("is-invalid").attr("data-valid", false);
+			 		 	}
+
+			 		 });
+
+			 		 $("#stat").blur(function(){
+			 		 	if(/^(Employed|Unemployed)$/.test($(this).val())){
+			 		 		$(this).removeClass("is-invalid").addClass("is-valid").attr("data-valid", true);
+			 		 	}else{
+			 		 		$(this).removeClass("is-valid").addClass("is-invalid").attr("data-valid", false);
+			 		 	};
+			 		 	});
+			 		});
+			 		 $("#btn1").click(function(){
+			 		 	const valid=[
+			 		 		$("#ename").attr("data-valid"),
+			 		 		$("#mail").attr("data-valid"),
+			 		 		$("#stat").attr("data-valid")
+			 		 	];
+			 		 	if (valid.every(e => e === "true")) {
+                    person.push({
+                      name: $("#ename").val(),
+                      email: $("#mail").val(),
+                      emp: $("#stat").val(),
+                    });
+                  } else {
+                    $("#error").text("Fill all the fields with valid data.");
+                  }
+                });
+                $("#run").click(function() {
+                  let tbody = "";
+                  person.forEach((p, i) => {
+                    tbody += `
+                      <tr>
+                        <th scope="row">${i+1}</th>
+                        <td>${p.name}</td>
+                        <td>${p.email}</td>
+                        <td>${p.emp}</td>
+                      </tr>
+                    `;
+                  })
+                   $("#tabod").html(tbody);
+                  $("#tab").show(500);
+                });
+                $("#cls").click(function() {
+                  $("#tabod").html("");
+                  $("#tab").hide(500);
+                });
+              });
+	      
+		</script>
+	</head>
+	<body>
+		<h2>Employement Register</h2>
+		<form>
+			Name <input type="text" name="ename"><br><br>
+			Email <input type="email" name="mail"><br><br>
+			Employment Status <select id="stat">
+								<option>Employed</option>
+								<option>Unemployed</option>
+							  </select>
+			<br><br>
+			<span id="error"></span>
+			<input type="button" value="Add" id="btn1"><br><br>
+			<table id="tab">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Employment Status</th>
+					</tr>
+				</thead>
+				<tbody id="tabod">
+				</tbody>
+			</table>
+			<input type="button" value="Run" id="btn2"> <input type="button" value="Clear" id="btn3">
+		</form>
+	</body>
+</html>

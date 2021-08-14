@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 5</title>
+	<script src="../Script/jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			alert("Hi");
+			$("div").eq(1).css("background-color","green");
+			
+		})
+	</script>
+	<style>
+		fieldset{
+			width: fit-content;
+			border: solid;
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+	<div> Div. target 1</div>
+	<div> Div. target 2</div>
+	<div> Div. target 3</div>
+	<div> Div. target 4</div>
+</fieldset>
+</body>
+</html>

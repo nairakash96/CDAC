@@ -1,0 +1,39 @@
+<html>
+<head>
+	<script src="../Script/jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    $("#btn1").click(function() {
+                $("p").prepend("<br><b>Prepand Text</b></br>");
+                $("h1").wrap("<header></header>");
+            });
+        });
+        $(document).ready(function() {
+		    $("#btn2").click(function() {
+                $("ol").append("<li>Append List</li>");
+                });
+        });
+        $(document).ready(function() {
+		    $("#btn3").click(function() {
+               $("h1").text("h2 position changed").appendTo($("p"))
+            });
+        });
+	</script>
+</head>
+<body>
+	<fieldset>
+		<h1>Greeeting</h1>
+		<p>This is a paragraph</p>
+		<p>This is another paragraph</p>
+		<ol>
+			<li>List iten 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ol>
+		<input type="button" value="Prepend Text" id="btn1">
+		<input type="button" value="Append List" id="btn2">
+		<input type="button" value="AppendTo text" id="btn3">
+	
+	<div id="disp"></div>
+</body>
+</html>

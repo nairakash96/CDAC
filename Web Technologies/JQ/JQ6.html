@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 6</title>
+	<script src="../Script/jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			alert("Hi");
+			$(":input").hide(5000);
+			$(":input").show(6000);
+			
+		})
+	</script>
+	
+
+	<style>
+		fieldset{
+			background-color: blue;
+			width: fit-content;
+			border-color: white;
+			color: white;
+			border-radius: 20px;
+			}
+			i{
+				color: lightgreen;
+			}
+	</style>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   
+</head>
+<body>
+	<fieldset>
+	<h2 align="center">Registration</h2>
+		<form>
+			<fieldset>
+				<legend>Registration Details</legend>
+				<table>
+				<tr><td>University</td>
+					<td><input type="text" name="university"></td>
+				</tr>
+				<tr>
+					<td>Institute</td>
+					<td><input type="text" name="inst"></td>
+				</tr>
+				<tr>
+					<td>Branch</td>
+					<td>
+						<select>
+							<option>--select--</option>
+							<option>Mech</option>
+							<option>Ele</option>
+							<option>IT</option>
+							<option>Civil</option>
+							<option>E&TC</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Degree</td>
+					<td>
+						<select>
+							<option>--select--</option>
+							<option>B.Sc</option>
+							<option>M.Sc</option>
+							<option>B.Tech</option>
+							<option>M.Tech</option>
+							<option>B.E</option>
+							<option>M.E</option>
+						</select>
+						<input type="radio" name="deg">Persuing
+						<input type="radio" name="deg">Completed
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Average CPI</td>
+					<td>
+						<input type="text" size="2"> Upto 
+						<input type="text" size="2">Th Semester
+					</td>
+				</tr>
+				<tr>
+					<td>Experience</td>
+					<td>
+						<input type="number" name="exp"> Years
+					</td>
+				</tr>
+				<tr>
+					<td>Your Website Or Blog</td>
+					<td>
+						<input type="text" name="blog" value="http://">
+					</td>
+				</tr>
+			</table>
+			</fieldset>
+			<div align="center">
+				<i class="fas fa-arrow-circle-left"></i>Step 2<i class="fas fa-arrow-circle-right"></i>
+			</div>
+		</form>
+	</fieldset>
+</body>
+</html>
