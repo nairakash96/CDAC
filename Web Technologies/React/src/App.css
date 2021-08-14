@@ -1,0 +1,23 @@
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+title{
+  font-size: 3rem;
+}
+table{
+  border: 2px solid red;
+  width: 100%;
+}
+th,td{
+  text-align: center;
+  border: 1px solid red;
+  padding: 15px 10px;
+}
+.bord{
+  border: 2px solid red;
+  padding: 5px;
+  
+}
