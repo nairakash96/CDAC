@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 26</title>
+	<script type="text/javascript">
+		function f1(){
+			let result=0;
+			let n=document.getElementById("num").value;
+			if(n<0 || n>1000){
+				alert("Entered No is out of range");
+			}
+			else{
+				while(n>0){
+					result+=n%10;
+					n=Math.floor(n/10);
+					console.log("result= "+result+" n= "+n)
+				}
+			document.getElementById("res").innerHTML=`${result}`;
+			}
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+		<form>
+			Enter a number below 1000
+			<input type="number" name="num" id="num"><br><br>
+			<input type="button" onclick="f1()" value="Submit Quary">
+		</form>
+	</fieldset>
+<div id="res"></div>
+</body>
+</html>

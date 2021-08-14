@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 9</title>
+	<script>
+		function DigSum(){
+			let num=prompt("Enter base value");
+			let res=0;
+			num=num.split(" ");
+			num=num.map((ele)=> parseInt(ele));
+			let ln=num.length;
+			for(i of num){
+				res+=i;
+			}
+			document.write("<br> Sum of Digit "+res+"<br> Average is "+(res/ln));
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		DigSum();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 14</title>
+	<script type="text/javascript">
+		function getWeekDay(wd){
+			var week=["MO","TU","WE","TH","FR","SA","SU"];
+			if(wd<=0){
+				wd=7;
+			}
+			return week[wd-1];
+		}
+		function f1(){
+			let date=new Date(document.getElementById("date").value);
+			document.write(date+" falls on "+getWeekDay(date.getDay()));
+			
+		}
+
+
+	</script>
+</head>
+<body>
+	<form>
+		<input type="date" name="date" id="date"><br><br>
+		<button onclick="f1()">Run</button>
+		<input type="reset" name="Clear">
+	</form>
+</body>
+</html>

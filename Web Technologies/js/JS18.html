@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 18</title>
+	<script type="text/javascript">
+		function f1(){
+			var str1=document.getElementById("ename").value;
+			let newlist=[];
+			str1=str1.split("").reverse().join("");
+			newlist.push(str1);
+			document.write("Reversed List= "+newlist.sort());
+			
+		}
+
+
+	</script>
+</head>
+<body>
+	<form>
+		Enter 6 employee Names
+		<input type="text" name="ename" id="ename"><br><br>
+		<button onclick="f1()">Run</button>
+		<input type="reset" name="Clear">
+	</form>
+</body>
+</html>
