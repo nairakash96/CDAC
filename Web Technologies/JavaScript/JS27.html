@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 27</title>
+	<script type="text/javascript">
+		function f1(){
+			let str=document.getElementById("str").value;
+			let str1=str.toUpperCase().split(" ").join(",");
+			document.getElementById("res").innerHTML=`<fieldset><b>Members of my Group area</b><br><br>${str1}</fieldset>`;
+		}
+	</script>
+	<style type="text/css">
+		fieldset{
+			width: fit-content;
+			border-style: dotted;
+			border-color: red;
+		}
+	</style>
+</head>
+<body>
+		<form>
+			Enter name of employee
+			<input type="text" name="str" id="str"><br><br>
+			<input type="button" onclick="f1()" value="Submit">
+		</form>
+<div id="res"></div>
+</body>
+</html>

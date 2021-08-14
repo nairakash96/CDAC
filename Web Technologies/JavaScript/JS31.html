@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 31</title>
+	<script type="text/javascript">
+		function f1(){
+			let cname=document.getElementById("ename").value;
+			let mail=document.getElementById("email").value;
+			let dob=document.getElementById("bdate").value;
+			let lnum=document.getElementById("Lnum").value;
+			let gen=document.getElementsByName("gen");
+			let Gen="";
+                for(i=0;i<gen.length;i++){
+                    if(gen[i].checked==true){
+                         Gen=gen[i].value;
+                    }
+                }
+            let fd=document.getElementsByClassName("food");
+            var Food=" ";
+                for(i=0;i<fd.length;i++){
+                    if(fd[i].checked==true){
+                        Food+=fd[i].value;
+						Food+=" ";
+                    }
+                }
+			return{
+				name:cname,
+				DOB:dob,
+				Email:mail,
+				lnum:lnum,
+                gen:Gen,
+                food:Food
+			}
+		}
+
+			function display(){
+				let data=f1();
+				var win=window.open("");
+				win.document.write(form)
+				win.document.write(`<li> Name : ${data.name}</li>`)
+				win.document.write(`<li> Birth Date : ${data.DOB}</li>`)
+				win.document.write(`<li> Email Id : ${data.Email}</li>`)
+				win.document.write(`<li> Gender : ${data.gen}</li>`)
+				win.document.write(`<li> Lucky No : ${data.lnum}</li>`)
+                win.document.write(`<li> Food : ${data.food}</li>`)
+			}
+
+			function nameVal(){
+			let cname=document.getElementById("ename").value;
+			if(cname.length<10){
+			alert("Nume must be more than 10 ");
+			document.getElementById("ename").focus();
+			document.getElementById("ename").select();
+			return false;
+			}
+			return true;
+		}
+
+        function LucNum(){
+			let lnum=document.getElementById("Lnum").value;
+			if(lnum.length<4){
+			alert("Lucky Number must be 4 digit");
+			document.getElementById("Lnum").focus();
+			document.getElementById("Lnum").select();
+			return false;
+			}
+			return true;
+		}
+
+		var form=`<fieldset><form>\
+			<table>\
+				<tr>\
+					<td>\
+						Name\
+					</td>\
+					<td>\
+						<input type="text" name="ename" id="ename" onchange="nameVal()">\
+					</td>\
+				</tr>\
+				<tr>\
+					<td>\
+						Birth Date\
+					</td>\
+					<td>\
+						<input type="date" name="bdate" id="bdate">\
+					</td>\
+				</tr>\
+				<tr>\
+					<td>\
+						Email\
+					</td>\
+					<td>\
+						<input type="email" name="email" id="email">\
+					</td>\
+				</tr>\
+
+                <tr>\
+					<td>\
+						Gender\
+					</td>\
+					<td>\
+						<input type="radio" name="gen" value="Male"> Male<br>\
+                        <input type="radio" name="gen" value="Female"> Female\
+					</td>\
+				</tr>\
+
+				<tr>\
+					<td>\
+						Luckey No\
+					</td>\
+					<td>\
+						<input type="text" name="Lnum"id="Lnum" onchange="LucNum()">\
+					</td>\
+				</tr>\
+				<tr>\
+					<td>
+						Favorit Food\
+					</td>\
+					<td>\
+						<input type="checkbox" class="food" id="food1" value="Pizza"> Pizza<br>\
+                        <input type="checkbox" class="food" id="food2" value="Pasta"> Pasta<br>\
+                        <input type="checkbox" class="food" id="food3" value="Chinese"> Chinese<br>\
+					</td>\
+				</tr>\
+			</table>\
+			<button onclick="display()">Sent Data</button>\
+		</form></fieldset>`
+	</script>
+	<style type="text/css">
+		fieldset{
+			width: fit-content;
+			border-style: dotted;
+			border-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="s1"></div>
+	<script>
+		document.getElementById("s1").innerHTML=`${form}`;
+	</script>
+</body>
+</html>

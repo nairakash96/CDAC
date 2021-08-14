@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 3</title>
+	<script type="text/javascript">
+		function Calc(){
+			let num1=parseInt(prompt("Enter a number1"));
+			let num2=parseInt(prompt("Enter a number2"));
+			let op=prompt("Enter an operator");
+			switch (op){
+				case "+":document.write("Addition "+(num1+num2));break;
+				case "-":document.write("Subtraction "+(num1-num2));break;
+				case "*":document.write("Product "+(num1*num2));break;
+				case "/":document.write("Division "+(num1/num2));break;
+				case "%":document.write("Reminder "+(num1%num2));break;
+				default: alert("Invalid input");break;
+			}
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		Calc();
+	</script>
+
+</body>
+</html>
