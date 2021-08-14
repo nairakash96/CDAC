@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<style>
+			table{
+				background-color:white;
+				color:#57e257
+				}
+			fieldset{
+				background-color:#e63554;
+				width:55vw;
+				border-radius:8px
+			}
+			td{
+				font-family:fantasy
+				}
+			h1{
+				color:black;
+				text-align:center;
+				background-color:lightgray
+			}
+			input{
+				width:16rem;
+				padding:7;
+				margin:2;
+			}
+			#a{
+				background-color:#29ec29;
+				color:white;
+				width:190;
+				margin-left:180px
+			}
+			#b{
+				background-color:#4ace6a;
+				color:white;
+				width:160;
+				margin-left:580px
+			}
+			.c{
+				width:19;
+				margin-left:15px
+			}
+			.d{
+				background-color:cecdcd;
+				font-size:40;
+				color:black
+				}
+			.e{
+				width:260px;
+				color:black
+				}
+			.f{
+				width:673px;
+				}
+			
+		</style>
+	</head>
+	<body>
+	
+	<form>
+		<fieldset>
+		<table border="1">
+		<tr class="d"><th colspan="2">Create Account</th></tr>
+		<tr>
+			<td>
+				First Name<br>
+				<input type="text" placeholder="First Name"><br>
+			</td>
+			<td>
+				Last Name<br>
+				<input type="text" placeholder="Last Name"><br>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Email<br>
+				<input class ="f" type="email" placeholder="Email"><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Password*<br>
+				<input type="password" placeholder="Password"><br>
+			</td>
+			<td>
+				Confirm Password*<br>
+				<input type="password" placeholder="Password"><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Gender<br>
+				<input class="c" type="radio" name="gen">Male<input  class="c" type="radio" name="gen">Female
+			</td>
+			<td>
+					Hobbies<br>
+					<input class="c" type="checkbox">Music
+					<input class="c" type="checkbox">Sports
+					<input class="c" type="checkbox">Travel
+					<input class="c" type="checkbox">Movies
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Sourse of Income<br>
+				<input id="income"
+				name="Income"
+				type="text"
+				list="SrcInc"/> 
+ 
+				<datalist id="SrcInc">
+					<option>Employed</option>
+					<option>Freelance</option>
+					<option>Public Speaker</option>
+					<option>Service</option>
+					<option>Retaired</option>
+				</datalist> 
+			</td>
+			<td>
+			<input class="e" type="range">20K
+			</td>
+		</tr>
+		<tr>
+			<td >
+				Upload Profile Picture
+				<input type="file">
+			</td>
+			<td>
+				Age<br>
+				<input type="number">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				Bio<br>
+				<textarea 
+					cols="100"
+					rows="5">
+				</textarea>
+			</td>
+		</tr>
+		<tr class="d">
+			<td colspan="2">
+				<br>
+				<input id="b" type="submit" value="Create">
+			</td>
+		</tr>
+		</table>
+		</fieldset>
+		</form>
+		
+		
+	</body>
+</html>
