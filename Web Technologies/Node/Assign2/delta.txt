@@ -1,0 +1,9 @@
+Alpha:comp:20000
+Alpha:comp:20000
+Bete:entc:60000
+Gama:it:50000
+Delta:it:70000
+Alpha:comp:20000
+Bete:entc:60000
+Gama:it:50000
+Delta:it:70000

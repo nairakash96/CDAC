@@ -1,0 +1,4 @@
+Empid   Name    Dept    Designation Salary
+1001    Akash   R&D     Sr.Engineer 500000
+1002    Anju    Edu     HOD         1500000
+1003    Yadhu   BPO     SME         50000

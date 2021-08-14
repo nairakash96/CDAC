@@ -1,0 +1,20 @@
+{"Cust":[
+    {
+        "Name":"Akash",
+        "Dept":"R&D",
+        "Sal":300000
+    },
+    {
+        "Name":"Anju",
+        "Dept":"HOD",
+        "Sal":3300000
+
+    },
+    {
+        "Name":"Ashish",
+        "Dept":"R&D",
+        "Sal":300000
+
+    }
+]
+}

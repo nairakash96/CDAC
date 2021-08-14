@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Appending-Prepending-Wrapping-Removing Demo</title>
+<script src="..\Scripts\jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").prepend(" <b>Prepended text</b>.");
+	$("h2").wrap("<header></header>");
+  });
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  }); 
+  $("#btn3").click(function(){
+    $( "h2" ).text("h2 position changed")
+	         .appendTo( $( "p" ) )
+  });
+});
+</script>
+</head>
+<body>
+ <h2>Greetings</h2>
+ <p>This is a paragraph.</p>
+ <p>This is another paragraph.</p>
+ <ol>
+   <li>List item 1</li>
+   <li>List item 2</li>
+   <li>List item 3</li>
+ </ol>
+ <button id="btn1">Prepend text</button>
+ <button id="btn2">Append list items</button>
+ <button id="btn3">AppendTo text</button>
+ </body>
+</html>

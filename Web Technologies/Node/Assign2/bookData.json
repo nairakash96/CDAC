@@ -1,0 +1,19 @@
+{
+    "Books":[
+        {
+            "Title":"Alkmist",
+            "Auther":"Palo Cola",
+            "Price":200
+        },
+        {
+            "Title":"Wings of Fire",
+            "Auther":"Dr. Kalam",
+            "Price":500
+        },
+        {
+            "Title":"My Story",
+            "Auther":"Anju",
+            "Price":250
+        }
+    ]
+}

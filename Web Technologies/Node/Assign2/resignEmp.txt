@@ -1,0 +1,8 @@
+Empid   Name    DOR
+1025    Rajive  13/05/2021
+1589    Shubham 15/5/2021
+1526    Alpha   25/2/2022
+Empid   Name    Dept    Designation Salary
+1001    Akash   R&D     Sr.Engineer 500000
+1002    Anju    Edu     HOD         1500000
+1003    Yadhu   BPO     SME         50000
