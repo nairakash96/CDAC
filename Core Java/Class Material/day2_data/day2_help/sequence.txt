@@ -1,0 +1,147 @@
+Today's topics
+ 
+JVM Architecture
+Enter OOPs  -- encapsulation , data hiding
+(achieved via class programming)
+Packages , classpath & access sepcifiers
+
+Revise
+
+Java Data Types : which 2 categories ?? : primitive : value holding type
+non numeric    numeric
+ref types : address holding types : class , array , interface
+
+Types of conversion in prim types 
+widening : implicit
+narrowing : explicit
+solve : 
+
+byte b1=10;
+int data=b1;//widening
+float f=23.45;//javac err
+double d1=f;
+long l1=454654;
+f=l1;//no err long ---> float
+
+Answer this 
+What will data type of result of
+1. byte & byte : int
+2. byte & short : int
+3. short & short : int
+4. int & long : long
+5. long & float : float
+6. float & double : double
+7. byte/short/int....& double : double
+
+
+JVM Architecture
+1. Class loader : lazy loading policy(on demand) to load required classes in JVM's memory(meta space)
+2. Run time data areas
+2.1 Method area : metaspace, 1 single copy per JVM , byte code information(class info), static data memebrs
+2.2 Heap : 1 single copy per JVM , dynamically created objects(state : non static data members)
+
+2.3 Stacks : 1 per thread.
+System threads : main thrd --looks for main(...) & execs sequentially
+GC
+
+main thrd's stack : stack frames (1 per method call)
+stack frm : method local information : method args , local vars, ret values
+main ---> meth1 --> meth2
+
+stack : m2 ---m1 ---main
+
+eg : main(...)
+{
+   int data=1234;
+   sop(data);
+}
+---------------------------
+Enter OOP
+refer to "regarding class n object"
+
+Encapsulation -- Class Programming (refer to 
+class,object,state,behaviour
+Objective --
+Create a class to represent 3D Box
+class Box ---tight encapsulation(achieved by making all non static data members:instance vars private)
+state -- width,height , depth --- double : private 
+paramterized constr --3 arg constr.
+Instance Methods : for supplying Business logic(B.L)
+1. To return Box details in String form (dimensions of Box)
+eg : String getBoxDetails()
+method declaration --- access specifier(private/default/protected/public) , ret type , name , args
+method definition --body
+
+2. To return computed volume of the box.
+
+
+this --keyword in java
+Usages
+1. To un-hide instance variable from local variable.
+eg : this.width=width;
+
+2. To invoke constructor of the same class , from different constructor.(constr chaining)
+eg : this(side,side,side);
+
+
+Create another class : TestBox --for  UI.
+Add psvmain(..){...}
+Use scanner --to accept box dims from user, create box instance.
+display its details & volume.
+
+-----------------
+Pointers vs java references
+Similarity -- Pointer & reference --hold an address of the object created on heap.
+Difference -- To add robustness to the language ,
+pointer arithmatic is not allowed in java.
+
+reference --- holds internal representation of address --
+
+eg : 
+Box b1=new Box(1,2,3);
+b1++;//javac err
+b1 += 10; //javac err
+String s=new String("hello");
+s ++;//javac err
+s += 10;//s = s + 10;no javac err
+
+------------------
+Add more business logic in the Box class
+
+1. Create Cubes
+sop("Enter side of a cube");
+Box cube=new Box(sc.nextDouble());//javac err
+
+Soln : constructor overloading (constr chaining)
+
+2. Add a method to Box class to compare equality of 2 boxes.
+eg : Box b1=new Box(1,2,3);
+Box b2=new Box(2,3,4);
+//o/p SAME if 2 boxes are equal : "SAME"  o.w "DIFEERENT"
+sop(b1.checkEqual(b2)?"SAME":"DIFFERNET");
+
+BOx class : 
+boolean checkEqual(Box anotherBox) //pass by value (copy) : anotherBox=b2
+{
+  return .....;
+}
+
+
+
+3. Add method to Box class to return a new Box with dimensions doubled
+eg : Box b1=new Box(10,20,30);
+//another box : 20 40 60
+
+ Box dbleDimBox=b1.createNewBoxDoubleDim();
+
+
+Mem pictures
+Garbage Collection : refer to "regarding GC"
+
+
+
+
+
+
+
+
