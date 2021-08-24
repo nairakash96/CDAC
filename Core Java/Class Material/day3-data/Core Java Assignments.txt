@@ -1,0 +1,167 @@
+Day 1
+1. Refer to "Installation Instructions" from day1-data\day1_help & complete.
+
+2. MUST go through "readme_day1"  from day1-data\day1_help\readmes & day1-data\day1_help\slides\PPTDay1.pdf
+
+3. Go through simple code samples from day1-data\code\src
+
+4. Solve 
+1. Accept 2 double values from User (using Scanner). Check data type.
+. If arguments are not doubles , supply suitable error message & terminate.
+If numbers are double values , print its average.
+
+2. Display food menu to user. User will select items from menu along with the quantity. (eg 1. Dosa 2. Samosa .......10 . Generate Bill ) Assign fixed prices to food items(hard code the prices)
+When user enters 'Generate Bill' option(10) , display total bill & exit.
+
+OR 
+Create java application for the following
+Accept 2 numbers from user & operation to perform
+1. Add 2.Subtract 3. Multiply 4.Divide 5.Exit
+Display the result of the operation. 
+Java app must continue to run till user chooses exit option.
+
+OR
+Prompt user for how many numbers(double) to accept
+Create suitable data structure to hold these numbers.
+Prompt user to populate the values in D.S
+Display the same.
+Prompt user for option
+1. Double nums
+2. Square nums
+3. Square root nums
+As per the option , apply this operation on all nums in the D.S
+display the same.
+
+
+Day2
+1. Do complete revision of class work & then solve today's assignemnts
+
+2. 
+Solve Tank assignment along with memory picture.
+
+What will be the output ?
+
+class Tank {
+  private int level;
+  Tank(int l)
+   {
+     level=l;
+   }
+  public void setLevel(int level1)
+  {
+    level=level1;
+  }
+  public int getLevel()
+  {
+    return level;
+  }
+}	
+
+public class Assignment {
+  public static void main(String[] args) {
+    Tank t1 = new Tank(10);
+    Tank t2 = new Tank(20);
+     s.o.p("1: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());//10 20
+    t1 = t2;//1st tank obj is marked GC
+    s.o.p("2: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());//20 20
+    t1.setLevel(27);
+     s.o.p("3: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());//27 27
+    t2.setLevel(t1.getLevel()+10);
+     s.o.p("4: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());//37 37
+  }
+}
+
+2.5 Solve ready code samples from : day2_data\day2_help\params_passing\
+TestParamPassing1 & TestParamPassing2
+
+3. Solve
+Create Point class Point2D   : for representing a point in x-y co-ordinate system.
+
+3.1 Create a parameterized constructor to accept x & y co-ords.
+
+
+3.2 Add a method to return string form of  point's x & y co-ords
+Hint :  public String getDetails()) 
+
+
+3.3 Add isEqual method to Point2D class : boolean returning method : must return true if both points are having same x,y co-ords or false otherwise.
+
+
+3.4 Add a method to Point2D class -- to create and return new point having given x & y offset.
+eg : Point2D p1=new Point2D(10,20);
+Point2d p3=p1.createNewPoint(5,-2);
+If user supplies offset of (5, -2) : your method should return a new point object placed at (15,18)
+
+
+3.5 Add calculateDistance method to calculate distance between current point & specified point & return the distance to the caller.
+Hint : Use distance formula . Use java.lang.Math class methods --sqrt, pow etc.
+double calcDistance(Point2D anotherPointRef)
+{
+}
+
+3.6 Write TestPoint class ,  with a main method
+Accept co ordinates of 2 points from user (Scanner) --p1 & p2
+
+3.7 Use getDetails method to display point details.(p1's details & p2's details)
+
+3.8 Invoke isEqual & display if points are same or different (i.e p1 & p2 are located at the same position)
+
+3.9 Create new point p3 , with the dimensions offset from p1.
+
+Day 3
+
+1. Revise entire class work.
+
+1.1 Import eclipse project day3.1 in your workspace
+
+Solve this
+Double box width for all boxes having volume > 100.(USE for-each & solve this : for understnding for-each clearly)
+
+
+1.5 Solve this without IDE pls.
+Copy earlier created Point2D class  n place it under the package "com.geometry"
+Copy earlier created TestPoint class n place it under "tester" package.
+Solve compiler errors n run it without IDE , w/o setting classpath
+Then set CLASSPATH , so that you can run it from anywhere
+
+
+
+2. Solve
+Create new eclipse project "day3_assgnment"
+Copy Point2D class n TestPoints class along with the packages in IDE.
+
+2.1 Create a new tester in package "com.tester" : TestPointArray
+ Prompt user , how many points to plot?
+Create suitable data structure  , to store Point2D type of references.
+
+2.2 Add a menu , Run the application till user chooses option 10 (exit)
+
+1 Plot a new point
+I/P --index , x & y
+eg : If user supplies 5 50 100
+Create a Point2D with x, y of (50,100) & its reference should be stored at the 5th index position in array.
+
+2 Display all points plotted so far. (Use for-each)
+
+3. Test equality of 2 points
+I/P : index1 , index 2
+eg If user enters 1 7 , you have to check if point at 1st n 7th index is same.
+If same , print "SAME" , otherwise print "DIFFERENT"
+
+4. Calculate distance
+I/P strt , end point indexes.
+eg : If user enters 2 6
+Find out the distance between 2nd & 6th point. (array indexes start from 0)
+
+10. Exit
+
+Note : Boundary condition checking & null checking is expected.
+(Meaning : if user supplies invalid index , then give error message : invalid index --out of range
+If no point is plotted at user specified index , then give error message : invalid index -- no point plotted here.)
+
+
+

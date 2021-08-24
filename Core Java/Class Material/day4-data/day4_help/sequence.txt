@@ -1,0 +1,74 @@
+Today's Topics
+Assignment discussion
+Create suitable data structure  , to store Point2D type of references.
+eg : Point2D[] points=new Point2D[sc.nextInt()];//10
+//method area : [Lcomp.geometry.Point2D
+//heap : array obj : CP, length=10,0.....9 : null, stack : points --> array obj
+boolean exit=false;
+while(!exit) {
+  switch-case
+  case 1 : //plot a point : I/P --index , x & y
+int index=sc.nextInt();
+//validating index n chking if the point is alrdy plotted at that index
+   if(index >= 0 && index < points.length && points[index] == null)
+   {
+     points[index]=new Point2D(sc.nextInt(),sc.nextInt());
+   }
+    else
+     sop("invalid index or point or alrdy plotted")
+} 
+break;
+ case 2 : //for-each
+for(Point2D p : points) //p=points[0]......p=points[points.length-1] {null,p1,p2,null,p3,null}
+  sop(p);
+break;
+
+2.2 Add a menu , Run the application till user chooses option 10 (exit)
+
+--------------------------------
+static keyword
+Inheritance 
+Polymorphism
+
+Revise
+Arrays Mem Pic
+Assignment help
+
+case 1 : 
+
+
+1.Dynamic init of arrays
+
+
+
+
+2. static keyword
+refer : "regarding static"
+
+3. Inheritance 
+refer to "readme inheritance.txt" from today's help.
+Person-Student-Faculty scenarion (constr invocation in inheritance hierarchy)
+refer to assgn1 pic.(Fruits / taste scenario)
+
+refer to "readme inheritance.txt" from today's help.
+4.1 What is inheritance  n Why 
+4.2 Real life Examples 
+4.3 Types
+4.4 constr invocation in inheritance hierarchy
+super keyword
+4.5 Show details : via toString : method overriding
+
+Objective : Arrange an event to invite students n faculties
+(eg : EventOrganizer app : tester --main / scanner)
+Prompt user for event capacity.
+
+Options 
+1. Register Student : 
+2. Register Faculty : 
+3. Display  details of all registered participants
+10. Exit
+
+
+
+
+
