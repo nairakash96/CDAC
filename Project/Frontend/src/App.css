@@ -1,0 +1,149 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #222222;
+}
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  border-style: inset;
+}
+
+.card-text {
+  font-size: 19px;
+  margin-left: 20px;
+  /* color: white; */
+}
+
+.border-style{
+  
+  border-style: inset;
+
+}
+
+.card-text-patient {
+  font-size: 19px;
+  margin-left: 20px;
+   color: white;
+}
+.special-card {
+  background-color: rgba(245, 245, 245, 1);
+  opacity: .8;
+  }
+  .card:hover{ /* Just for styling */
+    cursor: pointer;
+    box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+  }
+  .has-bg-img{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  /* Loads a specific image to a container */
+  .bg-img-nature{
+    background-image: url(./Components/cardbg.png);
+  }
+.login-key {
+  
+  font-size: 80px;
+ 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.form-control-label {
+  font-size: 10px;
+  color: #6C6C6C;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.login-title {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ECF0F5;
+}
+
+.login-box {
+  
+  height: auto;
+  background: #1A2226;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.myForm {
+  min-width: 600px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-style: inset;
+}
+
+.mx {
+  margin: 0 5px;
+}
+.p-card {
+  text-align: left;
+  margin-left: 200px;
+  size: 50%;
+}
+table {
+  border: 1px solid black;
+  border-radius: 10px;
+  border-style: inset;
+}
+td {
+  font-size: 19px;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
